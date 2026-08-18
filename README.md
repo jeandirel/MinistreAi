@@ -1,21 +1,27 @@
-# MINISTRE AI — Sovereign Executive Interface
+# MINISTRE AI — Intelligence exécutive souveraine
 
-Interfaces **MINISTRE AI uniquement** :
+Prototype **MINISTRE AI uniquement** pour le contexte gabonais.
 
-- Briefing stratégique exécutif
-- Espace documentaire intelligent
-- Centre de commandement décision → action
-- Commande exécutive IA
-- Analyse IA du dossier
-- Aide à l'arbitrage décisionnel
+## Interfaces
+
+- **Bilan exécutif du Ministre** : priorités, alertes, dossiers et décisions à valider
+- **Dossier stratégique** : intelligence documentaire, risques, sources et Q&A IA
+- **Centre de commandement décision → action** : directives, échéances, blocages, escalades et traçabilité
+- **Commande exécutive IA** : préparation de notes et briefings
+- **Analyse IA de dossier**
+- **Aide à l’arbitrage décisionnel**
+
+La nouvelle interface reprend les principes du design Stitch `Sovereign Trust` : ivoire institutionnel, bleu souverain, vert de confiance, or d’autorité, typographie éditoriale, faible usage des ombres et hiérarchie d’information très forte.
+
+Les éléments spécifiques à l’APDPVP ont été volontairement retirés : le produit reste **MINISTRE AI**, sans prétendre être un produit officiel d’une autorité existante.
 
 ## Architecture
 
-- `index.html` : interface Stitch d'origine
-- `app.html` : montage principal avec client IA
-- `ai-client.js` : interactions IA côté interface
+- `index.html` : interface souveraine MINISTRE AI
+- `app.html` : shell principal et injection du client IA
+- `ai-client.js` : interactions IA côté navigateur
 - `api/ai.js` : gateway serveur, clés jamais exposées au navigateur
-- `vercel.json` : route `/` vers l'interface IA
+- `vercel.json` : route `/` vers l’application
 
 ## Fournisseurs IA
 
@@ -31,11 +37,11 @@ Le gateway effectue un fallback automatique selon les fournisseurs configurés.
 
 Copier les variables utiles depuis `.env.example` dans **Vercel → Project → Settings → Environment Variables**.
 
-Minimum pour une démo gratuite :
+Exemple pour une démo cloud :
 
 ```env
 GEMINI_API_KEY=...
-GEMINI_MODEL=gemini-3.5-flash
+GEMINI_MODEL=...
 ```
 
 ou :
@@ -49,11 +55,11 @@ Puis redéployer.
 
 ## Politique de souveraineté
 
-Les API cloud gratuites servent **uniquement aux données publiques ou synthétiques de démonstration**.
+Les API cloud servent **uniquement aux données publiques ou synthétiques de démonstration**.
 
-Le serveur bloque une demande classifiée `CONFIDENTIEL`, `SENSIBLE`, `SECRET` ou `TRÈS SECRET` lorsqu'aucun fournisseur local/privé n'est configuré.
+Le serveur bloque une demande classifiée `CONFIDENTIEL`, `SENSIBLE`, `SECRET` ou `TRÈS SECRET` lorsqu’aucun fournisseur local/privé n’est configuré.
 
-Pour des données institutionnelles réelles, utiliser un modèle privé/local et une infrastructure adaptée aux exigences de sécurité, de protection des données et de souveraineté.
+Pour des données institutionnelles réelles, utiliser un modèle privé/local et une infrastructure conforme aux exigences de sécurité, de protection des données et de souveraineté.
 
 ## Navigation
 
@@ -61,4 +67,4 @@ Pour des données institutionnelles réelles, utiliser un modèle privé/local e
 - `#dossiers`
 - `#decisions`
 
-Les données visibles dans la version actuelle sont des **données de démonstration**.
+Les données visibles sont des **données synthétiques de démonstration**.
